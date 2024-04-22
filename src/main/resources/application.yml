@@ -1,18 +1,15 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/jwt_security
-    username: username
-    password: password
-    driver-class-name: org.postgresql.Driver
+    url: jdbc:sqlserver://DESKTOP-TVF7JAB:1433;encrypt=true;trustServerCertificate=true;databaseName=jwt
+    username: sa
+    password: theo2022
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jpa:
     hibernate:
       ddl-auto: create-drop
     show-sql: false
-    properties:
-      hibernate:
-        format_sql: true
-    database: postgresql
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database: sql_server
+    database-platform: org.hibernate.dialect.SQLServerDialect
 
 application:
   security:
